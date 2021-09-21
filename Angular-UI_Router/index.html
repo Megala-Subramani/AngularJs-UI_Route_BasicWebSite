@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html ng-app="myModule" >
+<head>
+    <base href="/" />
+    <meta charset="utf-8" />
+    <title>Angular UI Route</title>
+    <script src="scripts/angular-min.js"></script>
+    <script src="scripts/angular-ui-router-min.js"></script>
+    <script src="scripts/script.js"></script>
+    <link href="styles/home.css" rel="stylesheet" />
+</head>
+<body>
+    <table border="1">
+        <tr class="tableHeader">
+            <td colspan="2">
+                <div class="headerItem">WebSite Header</div>
+            </td>
+        </tr>
+        <tr class="tableBody">
+            <td class="sideBar">
+                <div>
+                    <a ui-sref="home" ui-sref-active="activeState" >Home</a><br />
+                    <a ui-sref="courses" ui-sref-active="activeState" >Courses</a><br />
+                    <a ui-sref="students" ui-sref-active="activeState" >Students</a><br />
+                </div>
+            </td>
+            <td class="mainBody"><ui-view></ui-view></td>
+        </tr>
+        <tr class="tableFooter">
+            <td colspan="2"><div class="footerItem">Website Footer</div></td>
+        </tr>
+    </table>
+</body>
+</html>
